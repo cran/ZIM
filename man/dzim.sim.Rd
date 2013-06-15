@@ -1,0 +1,36 @@
+\name{dzim.sim}
+\alias{dzim.sim}
+
+\title{Simulate Data from DZIM}
+
+\description{
+Simulate data from a dynamic zero-inflated model.
+}
+
+\usage{
+dzim.sim(X, w, omega, k, beta, phi, sigma, mu0, Sigma0) 
+}
+
+\arguments{
+\item{X}{design matrix.}
+\item{w}{\code{log(w)} is used as an offset variable in the linear predictor.}
+\item{omega}{zero-inflation parameter.}
+\item{k}{dispersion parameter.}
+\item{beta}{regression coefficients.}
+\item{phi}{autoregressive coefficients.}
+\item{sigma}{standard deviation.}
+\item{mu0}{mean vector of initial state.}
+\item{Sigma0}{covariance matrix of initial state.}
+}
+
+\seealso{
+\code{\link{dzim}},
+\code{\link{dzim.fit}},
+\code{\link{dzim.filter}}, 
+\code{\link{dzim.smooth}},
+\code{\link{dzim.control}},
+\code{\link{dzim.plot}}
+}
+
+\keyword{regression}
+

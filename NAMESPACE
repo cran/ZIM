@@ -1,0 +1,11 @@
+export("dzip",  "pzip",  "qzip",  "rzip",
+       "dzinb", "pzinb", "qzinb", "rzinb", 
+       "print.zim",   "zim",  "zim.control",  "zim.fit", 
+       "print.dzim", "dzim", "dzim.control", "dzim.fit", 
+       "dzim.filter", "dzim.smooth", "dzim.sim", "dzim.plot",
+       "bshift", "pvalue")
+
+S3method("print",  "zim")
+S3method("print", "dzim")
+
+
