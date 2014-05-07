@@ -1,11 +1,23 @@
-export("dzip",  "pzip",  "qzip",  "rzip",
-       "dzinb", "pzinb", "qzinb", "rzinb", 
-       "print.zim",   "zim",  "zim.control",  "zim.fit", 
-       "print.dzim", "dzim", "dzim.control", "dzim.fit", 
-       "dzim.filter", "dzim.smooth", "dzim.sim", "dzim.plot",
-       "bshift", "pvalue")
-
-S3method("print",  "zim")
-S3method("print", "dzim")
-
-
+S3method(print,dzim)
+S3method(print,zim)
+export(bshift)
+export(dzim)
+export(dzim.control)
+export(dzim.filter)
+export(dzim.fit)
+export(dzim.plot)
+export(dzim.sim)
+export(dzim.smooth)
+export(dzinb)
+export(dzip)
+export(pvalue)
+export(pzinb)
+export(pzip)
+export(qzinb)
+export(qzip)
+export(rzinb)
+export(rzip)
+export(zim)
+export(zim.control)
+export(zim.fit)
+import(MASS)

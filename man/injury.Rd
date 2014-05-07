@@ -1,25 +1,14 @@
+\docType{data}
 \name{injury}
 \alias{injury}
-\docType{data}
-
-\title{
-Example: Injury Series from Occupational Health
-}
-
-\description{
-Monthly number of injuries in hospitals from July 1988 to October 1995.
-}
-
+\title{Example: Injury Series from Occupational Health}
 \source{
 Numbers from Figure 1 of Yau et al. (2004).
 }
-
-\references{
-Yau, K. K. W., Lee, A. H. and Carrivick, P. J. W. (2004). Modeling zero-inflated count series 
-with application to occupational health. \emph{Computer Methods and Programs in Biomedicine}, 
-\bold{74}, 47-52.
+\description{
+Monthly number of injuries in hospitals from July 1988 to
+October 1995.
 }
-
 \examples{
 data(injury)
 plot(injury, type = "o", pch = 20, xaxt = "n", yaxt = "n", ylab = "Injury Count")
@@ -29,5 +18,11 @@ plot(injury, type = "o", pch = 20, xaxt = "n", yaxt = "n", ylab = "Injury Count"
   mtext("Pre-intervention",  line = 1, at = 25, cex = 1.5)
   mtext("Post-intervention", line = 1, at = 80, cex = 1.5)
 }
-
+\references{
+Yau, K. K. W., Lee, A. H. and Carrivick, P. J. W. (2004).
+Modeling zero-inflated count series with application to
+occupational health. \emph{Computer Methods and Programs in
+Biomedicine}, \bold{74}, 47-52.
+}
 \keyword{datasets}
+

@@ -1,32 +1,35 @@
 \name{zim.fit}
 \alias{zim.fit}
-
 \title{Fitter Function for Zero-Inflated Models}
-
-\description{
-\code{\link{zim.fit}} is the basic computing engine called by \code{\link{zim}} used to fit zero-inflated models. 
-This should usually \emph{not} be used directly unless by experienced users. 
-}
-
 \usage{
-zim.fit(y, X, Z, weights = rep(1, nobs), offset = rep(0, nobs), 
-  control = zim.control(...), ...) 
+zim.fit(y, X, Z, weights = rep(1, nobs), offset = rep(0, nobs),
+  control = zim.control(...), ...)
 }
-
 \arguments{
-\item{y}{response variable.}
-\item{X}{design matrix for log-linear part.}
-\item{Z}{design matrix for logistic part.}
-\item{weights}{an optional vector of 'prior weights' to be used in the fitting process.}
-\item{offset}{offset variable}
-\item{control}{control arguments from \code{\link{zim.control}}.}
-\item{...}{additional argumetns.}
-}
+  \item{y}{response variable.}
 
+  \item{X}{design matrix for log-linear part.}
+
+  \item{Z}{design matrix for logistic part.}
+
+  \item{weights}{an optional vector of 'prior weights' to
+  be used in the fitting process.}
+
+  \item{offset}{offset variable}
+
+  \item{control}{control arguments from
+  \code{\link{zim.control}}.}
+
+  \item{...}{additional argumetns.}
+}
+\description{
+\code{\link{zim.fit}} is the basic computing engine called
+by \code{\link{zim}} used to fit zero-inflated models. This
+should usually \emph{not} be used directly unless by
+experienced users.
+}
 \seealso{
-\code{\link{zim}},
-\code{\link{zim.control}}
+\code{\link{zim}}, \code{\link{zim.control}}
 }
-
 \keyword{regression}
 
