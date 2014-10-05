@@ -11,10 +11,10 @@
 #' Fitting parameter-driven models is based on sequential Monte Carlo (SMC) methods, which are
 #' computer intensive and could take several hours to estimate the model parameters.
 #' @author Ming Yang, Gideon K. D. Zamba, and Joeseph E. Cavanaugh
-#' @author Maintainer: Ming Yang <mingyang at hsph.harvard.edu> 
+#' @author Maintainer: Ming Yang <mingyang AT hsph.harvard.edu> 
 #' @references
 #' Yang, M., Cavanaugh, J. E., and Zamba, G. K. D. (2014+). State-space models for count time series
-#' with excess zeros. \emph{Statistical Modelling}, Accepted. \cr \cr
+#' with excess zeros. \emph{Statistical Modelling}, To Appear. \cr \cr
 #' Yang, M., Zamba, G. K. D., and Cavanaugh, J. E. (2013). Markov regression models for count time series
 #' with excess zeros: A partial likelihood approach. \emph{Statistical Methodology}, \bold{14}:26-38. \cr \cr
 #' Zeileis, A., Kleiber, C., and Jackman, S. (2008). Regression models for count data in \code{R}.  
@@ -49,7 +49,7 @@ NULL
 #' @title Example: Syphilis Series
 #' @description Weekly number of syphilis cases in the United States from 2007 to 2010.
 #' @format A data frame with 209 observations on the following 69 variables.
-#' \tabular{ll}{
+#' \tabular{llll}{
 #' \code{year} \tab Year                 \cr
 #' \code{week} \tab Week                 \cr
 #' \code{a1}   \tab \bold{United States} \cr

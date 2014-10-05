@@ -1,0 +1,29 @@
+%\VignetteIndexEntry{ZIM}
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+<<setup, echo=FALSE>>=
+options(width = 70)
+@
+
+<<zim>>=
+library(ZIM)
+
+data(syph)
+count <- syph$a33
+ar1 <- bshift(count > 0)
+trend <- 1:length(count) / 1000
+@
+
+<<zip>>=
+zim(count ~ ar1 + trend | trend)
+@
+
+<<zinb>>=
+zim(count ~ ar1 + trend | trend, dist = "zinb")
+@
+
+
+\end{document}

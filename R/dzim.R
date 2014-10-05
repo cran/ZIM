@@ -540,7 +540,7 @@ dzim <- function(formula, data, subset, na.action, weights = 1, offset = 0,
   fit
 }
 
-#' @S3method print dzim
+#' @export
 print.dzim <- function(x, digits = max(3, getOption("digits") - 3), ...) {
   pX <- NCOL(x$X)
   z.value <- x$para / x$se 
