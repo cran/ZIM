@@ -4,17 +4,17 @@
 #' @title Zero-Inflated Models for Count Time Series with Excess Zeros
 #' @description Fits observation-driven and parameter-driven models for count time series with excess zeros. 
 #' @details The package \code{ZIM} contains functions to fit statistical models for count time series 
-#' with excess zeros (Yang et al., 2013, 2014+). The main function for fitting observation-driven models 
+#' with excess zeros (Yang et al., 2013, 2015). The main function for fitting observation-driven models 
 #' is \code{\link{zim}}, and the main function for fitting parameter-driven models is \code{\link{dzim}}. 
 #' @note The observation-driven models for zero-inflated count time series can also be fit using the function 
 #' \code{\link[pscl]{zeroinfl}} from the \code{pscl} package (Zeileis et al., 2008). 
 #' Fitting parameter-driven models is based on sequential Monte Carlo (SMC) methods, which are
 #' computer intensive and could take several hours to estimate the model parameters.
 #' @author Ming Yang, Gideon K. D. Zamba, and Joeseph E. Cavanaugh
-#' @author Maintainer: Ming Yang <mingyang AT hsph.harvard.edu> 
+#' @author Maintainer: Ming Yang <mingyang at hsph.harvard.edu> 
 #' @references
-#' Yang, M., Cavanaugh, J. E., and Zamba, G. K. D. (2014+). State-space models for count time series
-#' with excess zeros. \emph{Statistical Modelling}, To Appear. \cr \cr
+#' Yang, M., Cavanaugh, J. E., and Zamba, G. K. D. (2015). State-space models for count time series
+#' with excess zeros. \emph{Statistical Modelling}, \bold{15}:70-90 \cr \cr
 #' Yang, M., Zamba, G. K. D., and Cavanaugh, J. E. (2013). Markov regression models for count time series
 #' with excess zeros: A partial likelihood approach. \emph{Statistical Methodology}, \bold{14}:26-38. \cr \cr
 #' Zeileis, A., Kleiber, C., and Jackman, S. (2008). Regression models for count data in \code{R}.  
@@ -49,7 +49,7 @@ NULL
 #' @title Example: Syphilis Series
 #' @description Weekly number of syphilis cases in the United States from 2007 to 2010.
 #' @format A data frame with 209 observations on the following 69 variables.
-#' \tabular{llll}{
+#' \tabular{ll}{
 #' \code{year} \tab Year                 \cr
 #' \code{week} \tab Week                 \cr
 #' \code{a1}   \tab \bold{United States} \cr
