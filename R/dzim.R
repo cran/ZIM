@@ -17,7 +17,7 @@
 #' \code{\link{dzim.control}},
 #' \code{\link{dzim.plot}}
 #' @keywords regression
-#' @export dzim.sim
+#' @export
 dzim.sim <-  function(X, w, omega, k, beta, phi, sigma, mu0, Sigma0) {
   n <- NROW(X)
   p <- length(phi)
@@ -60,7 +60,7 @@ dzim.sim <-  function(X, w, omega, k, beta, phi, sigma, mu0, Sigma0) {
 #' Gordon, N. J., Salmond, D. J., and Smith, A. F. M. (1993). Novel approach to nonlinear/non-Gaussian 
 #' Bayesian state estimation. \emph{IEEE Proceedings}, \bold{140}, 107-113. 
 #' @keywords regression
-#' @export dzim.filter
+#' @export
 dzim.filter <- function(y, X, w, para, control) {
   n <- NROW(X)
   pX <- NCOL(X)
@@ -135,7 +135,7 @@ dzim.filter <- function(y, X, w, para, control) {
 #' Gordsill, S. J., Doucet, A., and West, M. (2004). Monte Carlo smoothing for nonlinear time series. 
 #' \emph{Journal of the American Statistical Association}, \bold{99}, 156-168. 
 #' @keywords regression
-#' @export dzim.smooth
+#' @export
 dzim.smooth <- function(y, X, w, para, control) {
   n <- NROW(X)
   pX <- NCOL(X)
@@ -207,7 +207,7 @@ dzim.smooth <- function(y, X, w, para, control) {
 #' \code{\link{dzim.sim}},
 #' \code{\link{dzim.plot}}
 #' @keywords regression
-#' @export dzim.control
+#' @export
 dzim.control <- function(dist = c("poisson", "nb", "zip", "zinb"),
   trace = FALSE, start = NULL, order = 1, 
   mu0 = rep(0, order), Sigma0 = diag(1, order), 
@@ -234,7 +234,7 @@ dzim.control <- function(dist = c("poisson", "nb", "zip", "zinb"),
 #' \code{\link{dzim.sim}},
 #' \code{\link{dzim.plot}}
 #' @keywords regression
-#' @export dzim.fit
+#' @export
 dzim.fit <- function(y, X, offset = rep(0, n), control = dzim.control(...), ...) {
   deriv <- function(para) {
     R <- control$R
@@ -490,7 +490,7 @@ dzim.fit <- function(y, X, offset = rep(0, n), control = dzim.control(...), ...)
 #' \code{\link{dzim.sim}},
 #' \code{\link{dzim.plot}}
 #' @keywords regression
-#' @export dzim
+#' @export
 dzim <- function(formula, data, subset, na.action, weights = 1, offset = 0, 
   control = dzim.control(...), ...) {
   call <- match.call()
@@ -540,7 +540,7 @@ dzim <- function(formula, data, subset, na.action, weights = 1, offset = 0,
   fit
 }
 
-#' @S3method print dzim
+#' @export
 print.dzim <- function(x, digits = max(3, getOption("digits") - 3), ...) {
   pX <- NCOL(x$X)
   z.value <- x$para / x$se 
@@ -594,7 +594,7 @@ print.dzim <- function(x, digits = max(3, getOption("digits") - 3), ...) {
 #' @param k.inv logical; indicating whether an inverse transformation is needed for the dispersion parameter.
 #' @param sigma.sq logical; indicating whether a square transformation is needed for the standard deviation parameter.
 #' @param ... additional arguments.
-#' @export dzim.plot
+#' @export
 dzim.plot <- function(object, k.inv = FALSE, sigma.sq = FALSE, ...) {
   pX <- NCOL(object$X)
   control <- object$control

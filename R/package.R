@@ -10,8 +10,6 @@
 #' \code{\link[pscl]{zeroinfl}} from the \code{pscl} package (Zeileis et al., 2008). 
 #' Fitting parameter-driven models is based on sequential Monte Carlo (SMC) methods, which are
 #' computer intensive and could take several hours to estimate the model parameters.
-#' @author Ming Yang, Gideon K. D. Zamba, and Joeseph E. Cavanaugh
-#' @author Maintainer: Ming Yang <mingyang at hsph.harvard.edu> 
 #' @references
 #' Yang, M., Cavanaugh, J. E., and Zamba, G. K. D. (2015). State-space models for count time series
 #' with excess zeros. \emph{Statistical Modelling}, \bold{15}:70-90 \cr \cr
@@ -23,6 +21,11 @@
 #' @import MASS
 NULL
 
+#' @import stats
+NULL
+
+#' @importFrom graphics points
+NULL
 
 #' @docType data
 #' @name injury

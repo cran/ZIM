@@ -12,7 +12,7 @@
 #' @param epsilon positive convergence tolerance.
 #' @seealso \code{\link{zim}}, \code{\link{zim.fit}}
 #' @keywords regression
-#' @export zim.control
+#' @export
 zim.control <- function(dist = c("zip", "zinb"), method = c("EM-NR", "EM-FS"), 
   type = c("solve", "ginv"), robust = FALSE, trace = FALSE, start = NULL, 
   minit = 10, maxit = 10000, epsilon = 1e-8) {
@@ -36,7 +36,7 @@ zim.control <- function(dist = c("zip", "zinb"), method = c("EM-NR", "EM-FS"),
 #' @param ... additional argumetns.
 #' @seealso \code{\link{zim}}, \code{\link{zim.control}}
 #' @keywords regression
-#' @export zim.fit
+#' @export
 zim.fit <- function(y, X, Z, weights = rep(1, nobs), offset = rep(0, nobs), 
   control = zim.control(...), ...) { 
   nobs <- length(y)
@@ -285,7 +285,7 @@ zim.fit <- function(y, X, Z, weights = rep(1, nobs), offset = rep(0, nobs),
 #' fit observation-driven models for zero-inflated time series.  
 #' @seealso \code{\link{zim.fit}}, \code{\link{zim.control}}
 #' @keywords regression
-#' @export zim
+#' @export
 zim <- function(formula, data, subset, na.action, weights = 1, offset = 0, 
   control = zim.control(...),  ...) {
   call <- match.call()
@@ -374,7 +374,7 @@ zim <- function(formula, data, subset, na.action, weights = 1, offset = 0,
   fit
 }
 
-#' @S3method print zim
+#' @export
 print.zim <- function(x, digits = max(3, getOption("digits") - 3), ...) {
   pX <- NCOL(x$X)
   pZ <- NCOL(x$Z)
